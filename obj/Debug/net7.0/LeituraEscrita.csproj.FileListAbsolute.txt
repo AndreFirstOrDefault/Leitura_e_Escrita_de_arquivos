@@ -1,0 +1,14 @@
+D:\ProjetosCsharp\LeituraEscrita\bin\Debug\net7.0\LeituraEscrita.exe
+D:\ProjetosCsharp\LeituraEscrita\bin\Debug\net7.0\LeituraEscrita.deps.json
+D:\ProjetosCsharp\LeituraEscrita\bin\Debug\net7.0\LeituraEscrita.runtimeconfig.json
+D:\ProjetosCsharp\LeituraEscrita\bin\Debug\net7.0\LeituraEscrita.dll
+D:\ProjetosCsharp\LeituraEscrita\bin\Debug\net7.0\LeituraEscrita.pdb
+D:\ProjetosCsharp\LeituraEscrita\obj\Debug\net7.0\LeituraEscrita.GeneratedMSBuildEditorConfig.editorconfig
+D:\ProjetosCsharp\LeituraEscrita\obj\Debug\net7.0\LeituraEscrita.AssemblyInfoInputs.cache
+D:\ProjetosCsharp\LeituraEscrita\obj\Debug\net7.0\LeituraEscrita.AssemblyInfo.cs
+D:\ProjetosCsharp\LeituraEscrita\obj\Debug\net7.0\LeituraEscrita.csproj.CoreCompileInputs.cache
+D:\ProjetosCsharp\LeituraEscrita\obj\Debug\net7.0\LeituraEscrita.dll
+D:\ProjetosCsharp\LeituraEscrita\obj\Debug\net7.0\refint\LeituraEscrita.dll
+D:\ProjetosCsharp\LeituraEscrita\obj\Debug\net7.0\LeituraEscrita.pdb
+D:\ProjetosCsharp\LeituraEscrita\obj\Debug\net7.0\LeituraEscrita.genruntimeconfig.cache
+D:\ProjetosCsharp\LeituraEscrita\obj\Debug\net7.0\ref\LeituraEscrita.dll

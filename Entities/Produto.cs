@@ -21,7 +21,6 @@ public class Produto
     public double Preco { get; set; }
     public int Quantidade { get; set; }
     List<Produto> listaProduto = new List<Produto>();
-
     public void AdicionarProduto()
     {
         try
@@ -80,21 +79,20 @@ public class Produto
         try
         {
             Console.Write("Digite o código do produto: ");
-            int codigo = int.Parse(Console.ReadLine());
-
+            int codigo = int.Parse(Console.ReadLine());            
             if (VerificarSeExiste(codigo))
             {
+                Console.Write("Informe a categoria do produto: 1 - Informática, 2 - Smartphone, 3 - Acessórios: ");
+                int categoria = int.Parse(Console.ReadLine());
                 foreach (var item in listaProduto)
                 {
                     if (item.Codigo == codigo)
                     {
-                        listaProduto.Remove(item);
                         Gravador gravador = new Gravador();
-                        gravador.ApagarArquivo(item);
-                        Console.WriteLine("Removendo produto....");
-                        Thread.Sleep(1000);
+                        gravador.ApagarArquivo(item, categoria);
+                        listaProduto.Remove(item);
                         Console.WriteLine("Produto removido com sucesso!");
-                        Thread.Sleep(2000);
+                        break;
                     }
                 }
             }
@@ -103,9 +101,10 @@ public class Produto
                 Console.WriteLine("Produto não encontrado na lista.");
             }
         }
-        catch (Exception)
+        catch (Exception ex)
         {
             Console.WriteLine("Ops, algo deu errado, o programa será encerrado em 3 segundos");
+            Console.WriteLine(ex.Message);
             Thread.Sleep(3000);
             Environment.Exit(0);
         }
@@ -124,26 +123,32 @@ public class Produto
         {
             Console.Write("Digite o código do produto: ");
             int codigo = int.Parse(Console.ReadLine());
-            if (VerificarSeExiste(codigo))
+            Console.Write("Qual a categoria do produto: 1 - Informática, 2 - Smartphone, 3 - Acessórios: ");
+            string opcao = Console.ReadLine();
+            string categoria;
+            if(opcao == "1")
             {
-                foreach (var item in listaProduto)
-                {
-                    if (item.Codigo == codigo)
-                    {
-                        Console.WriteLine(item.ToString());
-                    }
-                }
+                categoria = "Informatica";
+            }
+            else if(opcao == "2")
+            {
+                categoria = "Smartphone";
+            }
+            else if(opcao == "3")
+            {
+                categoria = "Acessorios";
             }
             else
             {
-                Console.WriteLine("Produto não encontrado na lista.");
+                throw new Exception();
             }
+            Leitor leitor1= new Leitor();
+            leitor1.LerArquivo(codigo, categoria);
         }
         catch (Exception)
         {
-            Console.WriteLine("Ops, algo deu errado, o programa será encerrado em 3 segundos");
-            Thread.Sleep(3000);
-            Environment.Exit(0);
+            Console.WriteLine("Produto não encontrado!");
+            Thread.Sleep(2000);
         }
 
         finally
@@ -316,7 +321,8 @@ public class Produto
 
     public bool verificaListaVazia()
     {
-        if (listaProduto.Count == 0)
+        Leitor leitor = new Leitor();
+        if (listaProduto.Count == 0 )
         {
             return true;
         }
@@ -333,6 +339,7 @@ public class Produto
         Console.ReadLine();
         Console.Clear();
     }
+
     public override string ToString()
     {
         return $"\nCódigo: {Codigo}\n" +

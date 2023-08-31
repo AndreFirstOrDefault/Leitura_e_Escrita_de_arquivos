@@ -37,14 +37,28 @@ namespace LeituraEscrita.Entities
             {
                 Console.WriteLine(ex.Message);
             }
-        }
+            finally
+            {
+                
+            }
+        }        
 
-        
-
-        public void ApagarArquivo(Produto produto)
+        public void ApagarArquivo(Produto produto, int categoria)
         {
             try
             {
+               if (categoria == 1)
+                {
+                    caminho += @"D:\ArquivoProduto\Informatica\";
+                }
+                else if (categoria == 2)
+                {
+                    caminho += @"D:\ArquivoProduto\Smartphone\";
+                }
+                else if (categoria == 3)
+                {
+                    caminho += @"D:\ArquivoProduto\Acessorios\";
+                }
                 File.Delete(caminho + $@"{produto.Codigo}.txt");
             }
             catch (Exception ex)

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "d:\\ProjetosCsharp\\LeituraEscrita\\LeituraEscrita.csproj": {}
+    "D:\\ProjetosCsharp\\LeituraEscrita\\LeituraEscrita.csproj": {}
   },
   "projects": {
-    "d:\\ProjetosCsharp\\LeituraEscrita\\LeituraEscrita.csproj": {
+    "D:\\ProjetosCsharp\\LeituraEscrita\\LeituraEscrita.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\ProjetosCsharp\\LeituraEscrita\\LeituraEscrita.csproj",
+        "projectUniqueName": "D:\\ProjetosCsharp\\LeituraEscrita\\LeituraEscrita.csproj",
         "projectName": "LeituraEscrita",
-        "projectPath": "d:\\ProjetosCsharp\\LeituraEscrita\\LeituraEscrita.csproj",
+        "projectPath": "D:\\ProjetosCsharp\\LeituraEscrita\\LeituraEscrita.csproj",
         "packagesPath": "C:\\Users\\andre\\.nuget\\packages\\",
-        "outputPath": "d:\\ProjetosCsharp\\LeituraEscrita\\obj\\",
+        "outputPath": "D:\\ProjetosCsharp\\LeituraEscrita\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
